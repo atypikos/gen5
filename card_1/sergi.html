@@ -3,33 +3,63 @@
 <head>
     <meta charset="UTF-8"> <!--codificación de texto-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorite Things</title>
-    <link rel="stylesheet" href="../style.css"> <!-- Enlazar el archivo CSS -->
+    <title>Team Gen5</title>
+    <link rel="stylesheet" href="../cards.css"> <!-- Enlazar el archivo CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="cards">
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script> <!-- librería JS -->
+    <script>
+    particlesJS("particles-js", {
+        particles: {
+        number: { value: 50 },
+        size: { value: 3 },
+        color: { value: "#ceb37e" },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ceb37e",
+            opacity: 0.4,
+            width: 1
+        },
+        move: { speed: 1 }
+        }
+    });
+    </script>
     <header>
-        <nav class="fondo_nav">
-                <a class="nav_link_2" href="../index.html">HOME</a>
-                <a class="nav_link" href="../card_1/sergi.html">SERGI</a>                
-                <a class="nav_link" href="../card_2/julia.html">JULIA</a>
-                <a class="nav_link" href="../card_3/jose.html">JOSE</a>
-                <a class="nav_link" href="../card_4/sergio.html">SERGIO</a>
-                <a class="nav_link" href="../card_5/calero.html">CALE</a>
+        <nav>
+        <div id="branding">
+            <a href="../index.html">Become our next Gen.</a>
+        </div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#team">Team</a></li>
+            <li><a href="#">Our Solutions</a></li>
+            <li><a href="../whyus.html">Why Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
         </nav>
     </header>
     <main>
+                <div class="sidebar">
+        <a href="../card_1/sergi.html">S</a>
+        <a href="../card_2/julia.html">J</a>
+        <a href="../card_3/jose.html">J</a>
+        <a href="../card_4/sergio.html">S</a>
+        <a href="../card_5/calero.html">C</a>
+                </div>
     <section class="fondo_card">
         <div class="fondo_top-card">
-            <div class="flexontopcard">
+            <div>
                 <h1>Favorite Things</h1>
                 <img class="figure" src="../card_1/img_card_1/diamond_figma.svg" alt="decorative figure">
                 <h2>Sergi <span class="light_span"><br>Rovira</span></h2>
                 <input type="button" value="departamento de soluciones" class="departamento">
             </div>
-            <img class="imag" src="img_card_1/foto_sergi_retrato.jpeg" alt="foto sergi retrato">
+            <img class="retrato" src="img_card_1/foto_sergi_retrato.jpeg" alt="foto sergi retrato">
         </div>
             </div>
             <div class="flex_about">
@@ -55,7 +85,7 @@
             <ul>
                 <li>🪴 Solucionar problemas y ayudar</li>
             </ul>
-            <label for="fecha" class="conocer">Conocer a Sergi</label>
+            <label for="fecha">Conocer a Sergi</label>
             <input type="date" id="fecha" name="fecha">
             <a class="versiguiente" href="../card_2/julia.html">ver siguiente Fam Member</a>
             
