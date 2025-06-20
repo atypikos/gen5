@@ -167,12 +167,11 @@ label {
   font-weight: bold;
   margin: 10px 0;
   transition: 0.3s;
+
+            &:hover {
+              color: #ceb37e;
 }
 }
-
-
-a:hover {
-color: #ceb37e;
 }
 
 .versiguiente {
@@ -189,17 +188,17 @@ color: #ceb37e;
   margin-top: 20px;
   border-radius: 50px;
   transition: 400ms;
-}
 
-.versiguiente:hover {
+    &:hover {
   background-color: #262121;
   transform: translateY(-4px);
 
 }
 
-.versiguiente:active {
+  &:active {
   background-color: #262121;
   transform: scale(0.98);
+}
 }
 
 #buttons_card {
