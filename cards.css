@@ -221,17 +221,18 @@ label {
   border-radius: 50px;
   border: 0.2px solid black;
   transition: 400ms;
-}
 
-.veranterior:hover {
+   &:hover {
   background-color: #262121;
   transform: translateY(-4px);
   color: white;
-}
 
-.veranterior:active {
+  &:active {
   background-color: #262121;
   transform: scale(0.98);
+}
+
+}
 }
 
 
@@ -248,9 +249,8 @@ label {
   margin: 4px 2px;
   border-radius: 50px;
   cursor: pointer;
-}
 
-.departamento:hover {
+  &:hover {
   background-color: transparent;
   color: white;
   border: 0.5px solid black;
@@ -258,10 +258,12 @@ label {
   transition: 300ms;
 }
 
-.departamento:active {
+ &:active {
   background-color: #262121;
   transform: scale(0.98);
 }
+}
+
 
 .fondo_card {
   background-color: #ceb37e;
