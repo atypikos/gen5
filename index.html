@@ -13,90 +13,96 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+
+  <body class="oculto">
+    <div id="loader" class="pantalla-carga">
+      <img
+        src="./general_img/solutions_depp 1.svg"
+        alt="Logo"
+        class="logo-carga"
+      />
+    </div>
     <header>
-        <nav>
+      <nav>
         <div id="branding">
-            <a href="../index.html">Become our next Gen.</a>
+          <a href="../index.html">Become our next Gen.</a>
         </div>
         <ul>
-            <li><a class="navlink" href="../index.html">Home</a></li>
-            <li><a class="navlink" href="../index.html#team">Team</a></li>
-            <li><a class="navlink" href="#">Our Solutions</a></li>
-            <li><a class="navlink" href="../whyus.html">Why Us</a></li>
-            <li><a class="navlink" href="../contact.html">Contact Us</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="#">Our Solutions</a></li>
+          <li><a href="../whyus.html">Why Us</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
         </ul>
-        </nav>
+      </nav>
     </header>
+    <div id="fade" class="pantalla-blanca"></div>
+    <!-- Animacion -->
+    <main>
+      <section class="hero">
+        <a
+          class="discord" href="https://discord.com/users/391991701725642756" target="_blank">Contáctanos por Discord</a>
+        <div class="overlay"></div>
+        <h1>GEN.5 FINDS SOLUTIONS TO YOUR PROBLEMS</h1>
+        <p>solutions that inspire, so you can enjoy your time</p>
+        <a id="boton_know_2" href="card_1/sergi.html">DISCOVER</a>
+
+        <div class="sidebar">
+          <a class="enlace" href="card_1/sergi.html">S</a>
+          <a class="enlace" href="card_2/julia.html">J</a>
+          <a class="enlace" href="card_3/jose.html">J</a>
+          <a class="enlace" href="card_4/sergio.html">S</a>
+          <a class="enlace" href="card_5/calero.html">C</a>
+        </div>
+        <div class="hero_image">
+          <img src="./general_img/hero_test.jpg" alt="foto architecture" />
+        </div>
+      </section>
+
+      <section class="section_cards">
+        <div id="team" class="container_grid">
+          <a class="column_team" href="card_1/sergi.html">
+            <h2>Meet Sergi</h2>
+            <p>
+              Sergi is from the solutions department, trying to help people like
+              you in seconds
+            </p>
+            <span class="boton_know">More &rarr;</span>
+            <img src="./card_1/img_card_1/foto_sergi_retrato.jpeg" />
+          </a>
+          <a class="column_team" href="card_2/julia.html">
+            <h2>Meet Yulia</h2>
+            <p>
+              Yulia is from the happiness department, trying to make smile
+              people like you in seconds
+            </p>
+            <span class="boton_know">More &rarr;</span>
+            <img src="./card_2/img_card_2/julia_bootcamp.jpg" />
+          </a>
+          <a class="column_team" href="card_3/jose.html">
+            <h2>Meet Jose</h2>
+            <p>Jose is our Financial Advisor, his trade skills are awesome</p>
+            <span class="boton_know">More &rarr;</span>
+            <img src="./card_3/img_card_3/trade_josetorres.jpg" />
+          </a>
+          <a class="column_team" href="card_4/sergio.html">
+            <h2>Meet Sergio</h2>
+            <p>
+              Sergio is from the discord department, communication skills,
+              managing the app, he is just great
+            </p>
+            <span class="boton_know">More &rarr;</span>
+            <img src="./card_4/img_card_4/WiZiSergio_LOGO_01.png" />
+          </a>
+          <a class="column_team" href="card_5/calero.html">
+            <h2>Meet Calero</h2>
+            <p>Calero is the CEO, he just decides what's going on</p>
+            <span class="boton_know">More &rarr;</span>
+            <img src="./card_5/img_card_5/cale.jpg" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="animaciones.js"></script>
   </body>
-  <main>
-    <section class="hero">
-      <a
-        class="discord"
-        href="https://discord.com/users/391991701725642756"
-        target="_blank"
-        >Contáctanos por Discord</a
-      >
-      <div class="overlay"></div>
-      <h1>GEN.5 FINDS SOLUTIONS TO YOUR PROBLEMS</h1>
-      <p>solutions that inspire, so you can enjoy your time</p>
-      <a id="boton_know_2" href="card_1/sergi.html">DISCOVER</a>
-
-      <div class="sidebar">
-        <a href="card_1/sergi.html">S</a>
-        <a href="card_2/julia.html">J</a>
-        <a href="card_3/jose.html">J</a>
-        <a href="card_4/sergio.html">S</a>
-        <a href="card_5/calero.html">C</a>
-      </div>
-      <div class="hero_image">
-        <img src="./general_img/hero_test.jpg" alt="foto architecture" />
-      </div>
-    </section>
-
-    <section class="section_cards">
-      
-      <div id="team" class="container_grid">
-        <a class="column_team" href="card_1/sergi.html">
-          <h2>Meet Sergi</h2>
-          <p>
-            Sergi is from the solutions department, trying to help people like
-            you in seconds
-          </p>
-          <span class="boton_know">More &rarr;</span>
-          <img src="./card_1/img_card_1/foto_sergi_retrato.jpeg"/>
-        </a>
-        <a class="column_team" href="card_2/julia.html">
-          <h2>Meet Yulia</h2>
-          <p>
-            Yulia is from the happiness department, trying to make smile people
-            like you in seconds
-          </p>
-          <span class="boton_know">More &rarr;</span>
-          <img src="./card_2/img_card_2/julia_bootcamp.jpg"/>
-        </a>
-        <a class="column_team" href="card_3/jose.html">
-          <h2>Meet Jose</h2>
-          <p>Jose is our Financial Advisor, his trade skills are awesome</p>
-          <span class="boton_know">More &rarr;</span>
-          <img src="./card_3/img_card_3/trade_josetorres.jpg"/>
-        </a>
-        <a class="column_team" href="card_4/sergio.html">
-          <h2>Meet Sergio</h2>
-          <p>
-            Sergio is from the discord department, communication skills,
-            managing the app, he is just great
-          </p>
-          <span class="boton_know">More &rarr;</span>
-          <img src="./card_4/img_card_4/WiZiSergio_LOGO_01.png"/>
-        </a>
-        <a class="column_team" href="card_5/calero.html">
-          <h2>Meet Calero</h2>
-          <p>Calero is the CEO, he just decides what's going on</p>
-          <span class="boton_know">More &rarr;</span>
-          <img src="./card_5/img_card_5/cale.jpg"/>
-        </a>
-      </div>
-    </section>
-  </main>
 </html>

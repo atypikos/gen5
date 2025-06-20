@@ -9,6 +9,83 @@ Es un buen estándar moderno
 
 Mantiene todo bien alineado */
 
+/*Animaciones pag */
+/* Oculta scroll y contenido al principio */
+body.oculto {
+  overflow: hidden;
+}
+
+.pantalla-carga {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1; /* visible por defecto */
+  /* no le ponemos transición aquí */
+  transition: opacity 1s ease;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pantalla-carga.oculto {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease; /* transición solo cuando ocultamos */
+}
+
+.logo-carga {
+  width: 350px;
+  animation: zoomIn 4s ease forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Contenido principal (opcional animación de entrada) */
+#contenido {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#contenido.visible {
+  opacity: 1;
+}
+
+.pantalla-blanca {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 3s ease;
+  z-index: 1000;
+}
+
+.pantalla-blanca.mostrar {
+  opacity: 1;
+}
+
 /*NAVBAR*/
 
 nav {
@@ -25,42 +102,39 @@ nav {
   border-bottom: 2px solid #ceb37e;
   transition: 400ms;
 
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 7rem;
-      margin: 0;
-      padding: 0; 
-          
-        a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem;
-        font-weight: 200;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 7rem;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+      font-weight: 200;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: 400ms;
+      border-radius: 50px;
+      padding: 10px;
+
+      &:hover {
+        color: #ceb37e;
         transition: 400ms;
+        background-color: #262121;
         border-radius: 50px;
-        padding: 10px;
+        padding: 15px;
+        transform: translateY(-2px);
+      }
+      &:active {
+        color: white;
+        background-color: #262121;
+        transform: scale(0.98);
+      }
+    }
+  }
 }
-}
-}
-
-.navlink:hover {
-color: #ceb37e;
-transition: 400ms;
-background-color: #262121;
-border-radius: 50px;
-padding: 15px;
-transform: translateY(-2px);
-
-}
-
-.navlink:active {
-color: white;
-background-color: #262121;
-transform: scale(0.98);
-}
-
 
 #branding {
   background-color: #ceb37e;
@@ -73,19 +147,18 @@ transform: scale(0.98);
   left: 0;
   z-index: 3;
 
-    a {
-      position: absolute;
-      top: 80px;
-      left: 50px;
-      z-index: 2;
-      line-height: 1.1;
-      color: #2b2b2b;
-      text-decoration: none;
-      font-size: 25px;
-      font-weight: bold;
+  a {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    z-index: 2;
+    line-height: 1.1;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
-}
-
 
 .discord {
   position: fixed;
@@ -102,10 +175,10 @@ transform: scale(0.98);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   font-family: sans-serif;
-}
 
-.discord:hover {
-  transform: scale(1.15);
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 .hero {
@@ -116,22 +189,22 @@ transform: scale(0.98);
   text-align: center; /* Asegura que el texto esté alineado */
   height: 100vh; /* Mantiene la sección ocupando toda la pantalla */
   position: relative;
-}
 
-.hero h1 {
-  font-size: 3.2rem;
-  margin: 0; /* Elimina márgenes predeterminados */
-  z-index: 2; /* Asegura que el texto quede por encima de la imagen */
-  line-height: 1.1;
-  margin-bottom: 20px;
-}
+  h1 {
+    font-size: 3.2rem;
+    margin: 0; /* Elimina márgenes predeterminados */
+    z-index: 2; /* Asegura que el texto quede por encima de la imagen */
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
 
-.hero p {
-  font-size: 1.5rem;
-  margin: 0; /* Elimina márgenes predeterminados */
-  z-index: 2; /* Asegura que el texto quede por encima de la imagen */
-  color: #ceb37e;
-  max-width: 700px;
+  p {
+    font-size: 1.5rem;
+    margin: 0; /* Elimina márgenes predeterminados */
+    z-index: 2; /* Asegura que el texto quede por encima de la imagen */
+    color: #ceb37e;
+    max-width: 700px;
+  }
 }
 
 .hero_image {
@@ -141,12 +214,12 @@ transform: scale(0.98);
   width: 100vw;
   height: 100vh;
   z-index: -1;
-}
 
-.hero_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .overlay {
@@ -211,18 +284,18 @@ transform: scale(0.98);
   align-items: center;
   z-index: 1;
 
-      a {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 10px 0;
-      transition: 0.3s;
-}
-}
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: 0.3s;
 
-.sidebar a:hover {
-  color: #ceb37e;
+    &:hover {
+      color: #ceb37e;
+    }
+  }
 }
 
 .section_cards {
@@ -239,7 +312,6 @@ transform: scale(0.98);
   grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
   width: 100%;
 }
-
 
 .column_team {
   display: flex;
@@ -315,13 +387,11 @@ transform: scale(0.98);
   /* animation: rotate 7s linear infinite; */
 }
 
-#boton_know_2:hover{
+#boton_know_2:hover {
   background-color: white; /* Azul más oscuro */
   transform: scale(1.05); /* Leve aumento de tamaño */
   color: #2b2b2b;
 }
-
-
 
 /* @keyframes rotate {
   to {
