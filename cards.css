@@ -111,11 +111,11 @@ nav {
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
-    transition: 400ms;
+    transition: transform 350ms ease;
 
-          &:hover{
-          color: white;
-          transform: scale(1.1);
+
+    &:hover {
+            transform: rotate(30deg) scale(1.1);
     }
   }
 
@@ -414,10 +414,10 @@ label {
 #logo_color {
     width: 150px;
     height: 150px;
-    transition: 350ms;
+    transition: transform 350ms ease;
+
     
         &:hover {
-        fill:#ceb37e;
-        transform: scale(1.1);
-}
+            transform: rotate(30deg) scale(1.1);
+     }
 }
