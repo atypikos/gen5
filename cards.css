@@ -263,24 +263,32 @@ h1 {
 .fondo_top-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   background-color: #262121;
   padding-left: 3.5rem;
   padding-top: 1.5rem;
+  height: 28rem;
   border-bottom-right-radius: 120px;
   border-top-left-radius: 120px;
 
     div {
-  padding-bottom: 3rem;
+  padding-top: 3rem;
+
+      input {
+        margin-bottom: 3rem;
+      }
 }
+
 }
 
 
 .retrato {
   object-fit: cover;
-  /* flex: 1; Ocupar todo el espacio disponible */
+  height: 350px;
   width: 300px;
-  height: auto;
+  align-self: flex-end;
+  /* flex: 1; */
+  /* height: auto; */
   border-bottom-right-radius: 120px;
   border-top-left-radius: 120px;
 }
@@ -301,11 +309,13 @@ h1 {
 .about_me {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   order: 2;
 
     ul {
-  list-style: none;
+      list-style: none;
+      padding: 0; /* hace que el UL no tenga espacios y se pueda alinear bien */
+      margin: 0;
 }
 
 }
