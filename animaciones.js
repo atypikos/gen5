@@ -33,3 +33,35 @@ window.addEventListener("load", () => {
 });
 
 
+// navbar branding hidden
+
+const branding = document.getElementById('branding');
+const triggers = document.querySelectorAll('.trigger_invis');
+
+const visibleSections = new Set();
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const target = entry.target;
+
+      if (entry.isIntersecting) {
+        visibleSections.add(target);
+      } else {
+        visibleSections.delete(target);
+      }
+
+      if (visibleSections.size > 0) {
+        branding.classList.add('hidden');
+      } else {
+        branding.classList.remove('hidden');
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+triggers.forEach((section) => observer.observe(section));
+
